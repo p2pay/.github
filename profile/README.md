@@ -71,5 +71,13 @@ Development started and currently paused
 ![Stars](https://img.shields.io/github/stars/p2payserver/p2pay-website?style=social)
 ![Forks](https://img.shields.io/github/forks/p2payserver/p2pay-website?style=social)
 
+## Commercial advisory
+
+This is a non-profit open-source project under active development.
+
+For teams looking for production-ready, commercial payment architecture solutions today,
+Blockchange provides independent multi-rail payment advisory:
+https://www.blockchange.com.py/en/#book
+
 
 
