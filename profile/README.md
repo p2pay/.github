@@ -39,37 +39,38 @@ Of the 3 planned services (invoicing, ecommerce, booking) I'm still working on b
 ### [p2pay-invoicing](https://github.com/p2payserver/p2pay-invoicing)
 To be started
 
-![language](https://img.shields.io/github/languages/top/p2payserver/p2pay-invoicing)
-![Stars](https://img.shields.io/github/stars/p2payserver/p2pay-invoicing?style=social)
-![Forks](https://img.shields.io/github/forks/p2payserver/p2pay-invoicing?style=social)
+![language](https://img.shields.io/github/languages/top/p2payto/p2pay-invoicing)
+![Stars](https://img.shields.io/github/stars/p2payto/p2pay-invoicing?style=social)
+![Forks](https://img.shields.io/github/forks/p2payto/p2pay-invoicing?style=social)
 
 ### [p2pay-ecommerce](https://github.com/p2payserver/p2pay-ecommerce)
 Specs mostly defined
 
-![language](https://img.shields.io/github/languages/top/p2payserver/p2pay-ecommerce)
-![Stars](https://img.shields.io/github/stars/p2payserver/p2pay-ecommerce?style=social)
-![Forks](https://img.shields.io/github/forks/p2payserver/p2pay-ecommerce?style=social)
+![language](https://img.shields.io/github/languages/top/p2payto/p2pay-ecommerce)
+![Stars](https://img.shields.io/github/stars/p2payto/p2pay-ecommerce?style=social)
+![Forks](https://img.shields.io/github/forks/p2payto/p2pay-ecommerce?style=social)
 
 ### [p2pay-booking](https://github.com/p2payserver/p2pay-booking)
 Under active development
 
-![language](https://img.shields.io/github/languages/top/p2payserver/p2pay-booking)
-![Stars](https://img.shields.io/github/stars/p2payserver/p2pay-booking?style=social)
-![Forks](https://img.shields.io/github/forks/p2payserver/p2pay-booking?style=social)
+![language](https://img.shields.io/github/languages/top/p2payto/p2pay-booking)
+![Stars](https://img.shields.io/github/stars/p2payto/p2pay-booking?style=social)
+![Forks](https://img.shields.io/github/forks/p2payto/p2pay-booking?style=social)
 
 ### [p2pay-cloud](https://github.com/p2payserver/p2pay-cloud)
 Development started and currently paused
 
-![language](https://img.shields.io/github/languages/top/p2payserver/p2pay-cloud)
-![Stars](https://img.shields.io/github/stars/p2payserver/p2pay-cloud?style=social)
-![Forks](https://img.shields.io/github/forks/p2payserver/p2pay-cloud?style=social)
+![language](https://img.shields.io/github/languages/top/p2payto/p2pay-cloud)
+![Stars](https://img.shields.io/github/stars/p2payto/p2pay-cloud?style=social)
+![Forks](https://img.shields.io/github/forks/p2payto/p2pay-cloud?style=social)
 
-### [p2pay-website](https://github.com/p2payserver/p2pay-website)
-Development started and currently paused
+### [btcpay-plugin](https://github.com/p2payto/p2p-plugin)
+Under active development
 
-![language](https://img.shields.io/github/languages/top/p2payserver/p2pay-website)
-![Stars](https://img.shields.io/github/stars/p2payserver/p2pay-website?style=social)
-![Forks](https://img.shields.io/github/forks/p2payserver/p2pay-website?style=social)
+![language](https://img.shields.io/github/languages/top/p2payto/p2p-plugin)
+![Stars](https://img.shields.io/github/stars/p2payto/p2p-plugin?style=social)
+![Forks](https://img.shields.io/github/forks/p2payto/p2p-plugin?style=social)
+
 
 ## Commercial advisory
 
