@@ -27,10 +27,10 @@ Fiat payment processor with many local fiat payment methods with the merchant al
     - 1000 CHF (or equivalent in other currency) amount limit for each payment.
  
 ## Status
-Local payment methods integration with Peach Bitcoin. Btcpay server plugin under active development
-Local payment methods integration with Robosat almost ready but required a bond from the buyer.
-Local payment methods integration with Mostro. To be considered if feasible  
-Credit and debit cards integration being evaluated with centralized kyc-free providers.
+Local payment methods integration with Peach Bitcoin. Btcpay server plugin under active development.  
+Local payment methods integration with Robosat almost ready but required a bond from the buyer, but it can be enebaled by my merchants only for recurring clients, where the marchant can put the bond on behalf of hte buyer knowing he/she will pay.  
+Local payment methods integration with Mostro. To be considered if feasible.  
+Credit and debit cards integration being evaluated with centralized kyc-free providers.  
 Of the 3 planned services (invoicing, ecommerce, booking) I'm still working on booking as the first one because it is probably the most time consuming to implement.  
       
 ## Main repos
