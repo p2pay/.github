@@ -1,61 +1,131 @@
-Fiat payment processor with many local fiat payment methods with the merchant always receiving bitcoin.
+Open-source multi-rail Bitcoin payment infrastructure where merchants accept fiat and crypto while always receiving final settlement in bitcoin.
+
+P2Pay is a modular, self-custodial payment architecture built on top of BTCPay Server and peer-to-peer rails.  
+It is designed for censorship-resistant, high-risk and cross-border use cases.
+
+---
+
+## Core Principles
+
+- **Settlement-first architecture** (bitcoin as final layer)
+- **Multi-rail routing** (fiat, cards, P2P, crypto)
+- **Self-custodial by default**
+- **Vendor-neutral**
+- **KYC-free where legally possible**
+- **Designed for failure scenarios, not marketing demos**
+
+---
 
 ## Features
-- Self custodial solution with btcpay server integration.  
-- Supports on-chain and Lighning Network payments.
-- Supports USDt on TRON
-- Supports fiat with the merchant always receiving bitcoins.  
-- Invoicing for single user
-- Ecommerce for single user
-- Booking for single user
 
-## Target
-- Bitcoin enthusiasts: you believe in Bitcoin sound money but at the same time you know that Bitcoin is not widely used as you wish. This tool allows you to reach the traditional market without touching fiat money.  
-- High risk businesses: you are involved in legal high risk business such as adult or legal cannabis and you can't find a traditional payment gateway supporting your business.  
-- Unbanked and sanctioned: you are unbanked, or you live in a country that has not easy access to popular payment processors like Stripe, because your country is unsupported or even sanctioned.  
-- Emerging markets: you want to expand your virtual service business to emerging markets like LATAM and Africa and you lack of a reliable payment gateway.
+- BTCPay Server integration (Greenfield API)
+- Bitcoin on-chain payments
+- Lightning Network support
+- USDt on TRON
+- Fiat-to-BTC flows via P2P rails
+- Modular rail integrations (Peach, RoboSats, others)
+- Single-user booking, invoicing and ecommerce flows
+- API-first architecture
+- Designed for embeddable deployments
 
-## Payment methods. Fees. Limits.
-- Bitcoin: onchain and lightning network,
-  - No fee.
-  - No amount limit.  
-- USDt: on Tron if you have the plugin on btcpay.
-    - No fee.
-    - No amount limit
-- Fiat: All the currencies and local payment methods supported by [Peach Bitcoin](https://peachbitcoin.com) as listed [here](https://api.peachbitcoin.com/v1/info). Tens of local payment methods in Europe, LATAM, Africa with more to come, US excluded. Other p2p platforms integration will be evaluated.
--   - The fee is set by the merchant and paid by the buyer. To find a match it should be between 5 and 10%.
-    - 1000 CHF (or equivalent in other currency) amount limit for each payment.
- 
+---
+
+## Target Users
+
+- **Bitcoin-native builders** who want fiat reach without touching fiat custody  
+- **High-risk legal businesses** (adult, legal cannabis, grey-zone fintech)  
+- **Unbanked or sanctioned regions** lacking access to Stripe-like gateways  
+- **Emerging markets** (LATAM, Africa, cross-border freelancers)  
+- **Infrastructure teams** building settlement-first payment systems  
+
+---
+
+## Payment Rails (Architecture Overview)
+
+### Bitcoin
+- On-chain
+- Lightning Network  
+- No protocol-level limits  
+
+### USDt
+- TRON (via BTCPay plugin)
+
+### Fiat (via P2P)
+- Local rails aggregated through P2P platforms  
+- Merchant-defined fee (typically 5–7%)  
+- Per-transaction limits depend on rail  
+
+### Cards (experimental / under evaluation)
+- Redirect-based card → BTC settlement  
+- KYC-free thresholds where supported  
+- Architecture designed to isolate chargeback risk  
+
+---
+
 ## Status
-- Local payment methods integration with Peach Bitcoin. Btcpay server plugin under active development.  
-- Local payment methods integration with Robosat almost ready but required a bond from the buyer, but it can be enebaled by my merchants only for recurring clients, where the marchant can put the bond on behalf of hte buyer knowing he/she will pay.  
-- Local payment methods integration with Mostro. To be considered if feasible.  
-- Credit and debit cards integration being evaluated with centralized kyc-free providers.  
-- Of the 3 planned services (invoicing, ecommerce, booking) I'm still working on booking as the first one because it is probably the most time consuming to implement.  
-      
-## Main repos
 
-### [p2pay-booking](https://github.com/p2payserver/p2pay-booking)
-Under active development
+- Booking-first development strategy  
+- Market liquidity aggregation live  
+- P2P rail integrations modular and extensible  
+- Credit/debit card rails under evaluation  
+- Marketplace (multi-tenant) architecture planned  
+
+---
+
+# Active Repositories
+
+---
+
+## [p2pay-market](https://github.com/p2payto/p2pay-market)
+Multi-rail Bitcoin P2P offer comparator and spread index.
+
+Live deployment:  
+https://market.p2pay.to
+
+![language](https://img.shields.io/github/languages/top/p2payto/p2pay-market)
+![Stars](https://img.shields.io/github/stars/p2payto/p2pay-market?style=social)
+![Forks](https://img.shields.io/github/forks/p2payto/p2pay-market?style=social)
+
+---
+
+## [p2pay-booking](https://github.com/p2payto/p2pay-booking)
+Multi-rail booking system with final settlement in bitcoin.
+
+Live deployment:  
+https://booking.p2pay.to
 
 ![language](https://img.shields.io/github/languages/top/p2payto/p2pay-booking)
 ![Stars](https://img.shields.io/github/stars/p2payto/p2pay-booking?style=social)
 ![Forks](https://img.shields.io/github/forks/p2payto/p2pay-booking?style=social)
 
-### [p2pay-cloud](https://github.com/p2payserver/p2pay-cloud)
-Development started and currently paused
+---
 
-![language](https://img.shields.io/github/languages/top/p2payto/p2pay-cloud)
-![Stars](https://img.shields.io/github/stars/p2payto/p2pay-cloud?style=social)
-![Forks](https://img.shields.io/github/forks/p2payto/p2pay-cloud?style=social)
+## [robosats-nitro](https://github.com/p2payto/robosats-nitro)
+Nitro server integration layer for RoboSats rail.
 
-### [btcpay-plugin](https://github.com/p2payto/p2p-plugin)
-Under active development
+![language](https://img.shields.io/github/languages/top/p2payto/robosats-nitro)
+![Stars](https://img.shields.io/github/stars/p2payto/robosats-nitro?style=social)
+![Forks](https://img.shields.io/github/forks/p2payto/robosats-nitro?style=social)
+
+---
+
+## [robosats-nuxt](https://github.com/p2payto/robosats-nuxt)
+Nuxt integration layer for RoboSats authentication and client-side flows.
+
+![language](https://img.shields.io/github/languages/top/p2payto/robosats-nuxt)
+![Stars](https://img.shields.io/github/stars/p2payto/robosats-nuxt?style=social)
+![Forks](https://img.shields.io/github/forks/p2payto/robosats-nuxt?style=social)
+
+---
+
+## [p2p-plugin](https://github.com/p2payto/p2p-plugin)
+BTCPay Server plugin enabling P2P rail integrations (Peach-based).
 
 ![language](https://img.shields.io/github/languages/top/p2payto/p2p-plugin)
 ![Stars](https://img.shields.io/github/stars/p2payto/p2p-plugin?style=social)
 ![Forks](https://img.shields.io/github/forks/p2payto/p2p-plugin?style=social)
 
+---
 
 ## Commercial advisory
 
@@ -64,6 +134,4 @@ This is a non-profit open-source project under active development.
 For teams looking for production-ready, commercial payment architecture solutions today,
 Blockchange provides independent multi-rail payment advisory:
 https://www.blockchange.expert/en/#book
-
-
 
