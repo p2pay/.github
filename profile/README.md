@@ -2,7 +2,7 @@
 
 Open-source, modular Bitcoin payment infrastructure. Accept fiat and crypto across multiple rails. Settle in bitcoin or in the stablecoin that works best for your market.
 
-> **P2Pay is chain-agnostic.** We don't pick chains for ideology — we pick them for what actually works. The settlement layer is Bitcoin or a Bitcoin-native stablecoin, depending on what the market needs and what the best available integration supports. Today that means BTC on-chain, Lightning, and Liquid — because Liquid gives us Bitcoin-native stablecoins such as USDt, BRLz, EURx, and more, without altcoin exposure. That may evolve. The principle won't.
+> **P2Pay is chain-agnostic.** We do not pick chains for ideology — we pick them for what actually works. The settlement layer is Bitcoin or a Bitcoin-native stablecoin, depending on what the market needs and what the best available integration supports. Today that means BTC on-chain, Lightning, and Liquid — because Liquid gives us Bitcoin-native stablecoins such as USDt, BRLz, EURx, and more, without altcoin exposure. That may evolve. The principle will not.
 
 ---
 
@@ -39,7 +39,7 @@ Open-source, modular Bitcoin payment infrastructure. Accept fiat and crypto acro
 
 P2Pay is not only about accepting payments. It is also about moving value across the rails that actually work in each market.
 
-Through Aqua and our wallet fork, swaps between supported currencies will always be possible at the best rate available on the market through the best integration we can expose.
+Through Aqua and our wallet fork, swaps between currencies supported by the wallet will always be possible at the lowest available market rate through the best integration we can expose.
 
 That means a merchant can accept on one rail, settle on another, and still keep spending optionality:
 
@@ -47,12 +47,13 @@ That means a merchant can accept on one rail, settle on another, and still keep 
 - **Liquid stablecoins** such as USDt, BRLz, and EURx when local market conditions make them more practical
 - **Revolut** as a fiat exit path in Europe
 - **Belo** as a LATAM-friendly exit path, especially for BTC and USDT on Polygon
-- **Offramp.xyz** as a broader global spending/off-ramp option where supported
+- **Offramp.xyz** as a broader global spending and off-ramp option where supported
 
-The principle is simple:  
+The principle is simple:
+
 **accept where conversion works, settle where custody is strongest, and spend where the region is actually supported.**
 
-Regional and asset availability may vary depending on the provider. Some off-ramp paths may be limited by jurisdiction or supported only for specific assets.
+Regional and asset availability may vary depending on the provider. Some off-ramp paths may be limited by jurisdiction or available only for specific assets.
 
 ---
 
@@ -79,7 +80,7 @@ P2Pay exists for cases where traditional payment stacks break down:
 - users in emerging markets
 - builders who want modular Bitcoin-native payment infrastructure
 
-If payment platforms work fine for you, P2Pay is not for you. If they don't, this is yours.
+If payment platforms work fine for you, P2Pay is not for you. If they do not, this is yours.
 
 ---
 
