@@ -2,7 +2,7 @@
 
 Open-source, modular Bitcoin payment infrastructure. Accept fiat and crypto across multiple rails. Settle in bitcoin or in the stablecoin that works best for your market.
 
-> **P2Pay is chain-agnostic.** We don't pick chains for ideology — we pick them for what actually works. The settlement layer is Bitcoin or a Bitcoin-native stablecoin, depending on what the market needs and what the best available integration supports. Today that means BTC on-chain, Lightning, and Liquid — because Liquid gives us Bitcoin-native stablecoins (USDt, BRLz, EURx, and more) without altcoin exposure. That may evolve. The principle won't.
+> **P2Pay is chain-agnostic.** We don't pick chains for ideology — we pick them for what actually works. The settlement layer is Bitcoin or a Bitcoin-native stablecoin, depending on what the market needs and what the best available integration supports. Today that means BTC on-chain, Lightning, and Liquid — because Liquid gives us Bitcoin-native stablecoins such as USDt, BRLz, EURx, and more, without altcoin exposure. That may evolve. The principle won't.
 
 ---
 
@@ -35,13 +35,34 @@ Open-source, modular Bitcoin payment infrastructure. Accept fiat and crypto acro
 
 ---
 
+## Settlement, Swaps, and Off-Ramps
+
+P2Pay is not only about accepting payments. It is also about moving value across the rails that actually work in each market.
+
+Through Aqua and our wallet fork, swaps between supported currencies will always be possible at the best rate available on the market through the best integration we can expose.
+
+That means a merchant can accept on one rail, settle on another, and still keep spending optionality:
+
+- **BTC / Lightning / Liquid** for native Bitcoin settlement
+- **Liquid stablecoins** such as USDt, BRLz, and EURx when local market conditions make them more practical
+- **Revolut** as a fiat exit path in Europe
+- **Belo** as a LATAM-friendly exit path, especially for BTC and USDT on Polygon
+- **Offramp.xyz** as a broader global spending/off-ramp option where supported
+
+The principle is simple:  
+**accept where conversion works, settle where custody is strongest, and spend where the region is actually supported.**
+
+Regional and asset availability may vary depending on the provider. Some off-ramp paths may be limited by jurisdiction or supported only for specific assets.
+
+---
+
 ## Active Repositories
 
 ### [mono](https://github.com/p2payto/mono)
 Main repository. Core application logic, rail integrations, payment flows, dashboard, and mini-app surfaces. Active development happens here.
 
 ### [wallet](https://github.com/p2payto/wallet)
-Mobile wallet forked from Aqua. Merchant-controlled signing and self-custodial flows. Liquid-native by default. Part of the P2Pay architecture, not a standalone product.
+Mobile wallet forked from Aqua. Merchant-controlled signing, swaps, and self-custodial settlement flows. Liquid-native by default. Part of the P2Pay architecture, not a standalone product.
 
 ### [miniapp](https://github.com/p2payto/miniapp)
 Upcoming Nuxt mini app embedded in the wallet. Extends P2Pay payment flows through a wallet-native interface.
@@ -71,7 +92,7 @@ If payment platforms work fine for you, P2Pay is not for you. If they don't, thi
 
 ## Commercial Advisory
 
-Commercial architecture advisory, integration design, and implementation support available separately via [Blockchange](https://blockchange.expert).
+Commercial architecture advisory, integration design, and implementation support are available separately via [Blockchange](https://blockchange.expert).
 
 For teams looking for production-ready, commercial payment architecture solutions today,
 Blockchange provides independent multi-rail payment advisory:
