@@ -33,7 +33,7 @@ If a rail does not already settle into an asset supported by the Aqua wallet for
 
 ---
 
-## Active Repositories
+## Active and Planned Repositories
 
 ### [mono](https://github.com/p2pay/mono)
 Main orchestrator repository. It assembles rails, flows, and supporting services in one workspace. Active development is currently centered here.
@@ -41,8 +41,11 @@ Main orchestrator repository. It assembles rails, flows, and supporting services
 ### [wallet](https://github.com/p2pay/wallet)
 Mobile wallet based on Aqua. Used for signing and self-custodial settlement flows within the broader P2Pay architecture.
 
-### [miniapp](https://github.com/p2pay/miniapp)
+### [app](https://github.com/p2pay/app)
 Nuxt-based wallet mini app. Intended to extend payment flows through an embedded interface.
+
+### marketplace
+Closed-source repository for multi-user marketplace integrations.
 
 ---
 
