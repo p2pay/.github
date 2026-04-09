@@ -1,3 +1,5 @@
+[Español](README.es,md) | [Brasileiro](README.pt.md) | [Русский](README.ru.md) | [Français](README.fr.md) | [Italiano](README.it.md)  
+
 # P2Payments
 
 Open-source, modular payment infrastructure built around Bitcoin- and stablecoin-based settlement, designed to enable more frictionless integration and payment flows across markets and rails. It uses [BTCPay Server](https://github.com/btcpayserver/btcpayserver) as the backend, an [Aqua Wallet](https://github.com/AquaWallet/aqua-wallet) fork for self-custodial settlement, and is primarily built with [Nuxt](https://github.com/nuxt/nuxt) and [Nitro](https://github.com/nitrojs/nitro).
