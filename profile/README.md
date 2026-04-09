@@ -86,7 +86,7 @@ The repositories should be read as active infrastructure work, not as a finished
 ## Community
 
 - [GitHub Discussions](https://github.com/orgs/P2Payments/discussions)
-- [Telegram](https://t.me/P2PaymentsCom)
+- [Telegram Group](https://t.me/P2PaymentsCom)
 
 ---
 
