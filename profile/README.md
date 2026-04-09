@@ -1,4 +1,4 @@
-[Español](README.es,md) | [Brasileiro](README.pt.md) | [Русский](README.ru.md) | [Français](README.fr.md) | [Italiano](README.it.md)  
+[Español](https://github.com/P2Payments/.github/blob/main/profile/README.es.md) | [Português](https://github.com/P2Payments/.github/blob/main/profile/README.pt.md) | [Русский](https://github.com/P2Payments/.github/blob/main/profile/README.ru.md) | [Français](https://github.com/P2Payments/.github/blob/main/profile/README.fr.md) | [Italiano](https://github.com/P2Payments/.github/blob/main/profile/README.it.md)
 
 # P2Payments
 
