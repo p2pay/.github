@@ -83,5 +83,6 @@ Los repositorios deben leerse como trabajo activo de infraestructura, no como un
 
 ## Comunidad
 
-- [GitHub Discussions](https://github.com/orgs/P2Payments/discussions)
-- [Telegram](https://t.me/P2PaymentsCom)
+- [Discusiones de GitHub](https://github.com/orgs/P2Payments/discussions)  
+- [Grupo de Telegram](https://t.me/P2PaymentsCom)
+
