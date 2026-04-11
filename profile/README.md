@@ -1,10 +1,10 @@
-[Español](https://github.com/P2Payments/.github/blob/main/profile/README.es.md) | [Português](https://github.com/P2Payments/.github/blob/main/profile/README.pt.md) | [Русский](https://github.com/P2Payments/.github/blob/main/profile/README.ru.md) | [Français](https://github.com/P2Payments/.github/blob/main/profile/README.fr.md) | [Italiano](https://github.com/P2Payments/.github/blob/main/profile/README.it.md)
+[Español](https://github.com/P2Pagos/.github/blob/main/profile/README.es.md) | [Português](https://github.com/P2Pagos/.github/blob/main/profile/README.pt.md) | [Русский](https://github.com/P2Pagos/.github/blob/main/profile/README.ru.md) | [Français](https://github.com/P2Pagos/.github/blob/main/profile/README.fr.md) | [Italiano](https://github.com/P2Pagos/.github/blob/main/profile/README.it.md)
 
-# P2Payments
+# P2Pagos
 
 Open-source, modular payment infrastructure built around Bitcoin- and stablecoin-based settlement, designed to enable more frictionless integration and payment flows across markets and rails. It uses [BTCPay Server](https://github.com/btcpayserver/btcpayserver) as the backend, an [Aqua Wallet](https://github.com/AquaWallet/aqua-wallet) fork for self-custodial settlement, and is primarily built with [Nuxt](https://github.com/nuxt/nuxt) and [Nitro](https://github.com/nitrojs/nitro).
 
-P2Payments combines multiple entry rails — local fiat, cards, P2P, and crypto — with on-chain settlement in Bitcoin, USDT on Polygon, or other stablecoins on Liquid.
+P2Pagos combines multiple entry rails — local fiat, cards, P2P, and crypto — with on-chain settlement in Bitcoin, USDT on Polygon, or other stablecoins on Liquid.
 
 It is designed for users and businesses that need simpler access to self-custodial, cross-border payment flows, including in markets where traditional payment access is limited.
 
@@ -12,14 +12,14 @@ It is designed for users and businesses that need simpler access to self-custodi
 
 ## Approach
 
-P2Payments is designed around a few practical choices:
+P2Pagos is designed around a few practical choices:
 - **Self-custodial by default**
 - **Agnostic in practice** — the usable rail and settlements for best conversion path matter more than ideology
 - **Multi-rail** — different markets need different ways to pay
 - **Modular** — rails and flows can be enabled or left out depending on the use case
 - **Open source** — the public components remain MIT licensed
 
-If a rail does not already settle into an asset supported by the Aqua wallet fork, P2Payments aims to convert further into the supported asset that is cheapest and most functional for that case.
+If a rail does not already settle into an asset supported by the Aqua wallet fork, P2Pagos aims to convert further into the supported asset that is cheapest and most functional for that case.
 
 ---
 
@@ -44,11 +44,11 @@ If a rail does not already settle into an asset supported by the Aqua wallet for
 
 ## Active and Planned Repositories
 
-### [mono](https://github.com/P2Payments/mono)
+### [mono](https://github.com/P2Pagos/mono)
 Single user orchestrator MIT repository. It assembles rails, flows, and supporting services in one workspace. Active development is currently centered here.
 
-### [wallet](https://github.com/P2Payments/wallet)
-A MIT fork of the Aqua Flutter Wallet for P2Payments, with an embedded Nuxt app to manage /mono settings and connect to BTCPay via the Shamrock protocol.
+### [wallet](https://github.com/P2Pagos/wallet)
+A MIT fork of the Aqua Flutter Wallet for P2Pagos, with an embedded Nuxt app to manage /mono settings and connect to BTCPay via the Shamrock protocol.
 
 ### dashboard
 Nuxt-based MIT app, intended to handle payment flows through an embedded interface in the /wallet Flutter app.
@@ -60,7 +60,7 @@ Closed-source repository for multi-user marketplace integrations of the /mono re
 
 ## Intended Use Cases
 
-P2Payments is aimed at cases where standard payment stacks are too limited, too fragile, or too dependent on a single provider.
+P2Pagos is aimed at cases where standard payment stacks are too limited, too fragile, or too dependent on a single provider.
 
 Typical use cases include:
 
@@ -77,7 +77,7 @@ It is not meant to be presented as a universal fit for every merchant.
 
 ## Status
 
-P2Payments is still evolving. Some components exist as working integrations, others are partial, experimental, or still being assembled into the main orchestrator.
+P2Pagos is still evolving. Some components exist as working integrations, others are partial, experimental, or still being assembled into the main orchestrator.
 
 The repositories should be read as active infrastructure work, not as a finished product suite.
 
@@ -85,8 +85,8 @@ The repositories should be read as active infrastructure work, not as a finished
 
 ## Community
 
-- [GitHub Discussions](https://github.com/orgs/P2Payments/discussions)
-- [Telegram Group](https://t.me/P2PaymentsCom)
+- [GitHub Discussions](https://github.com/orgs/P2Pagos/discussions)
+- [Telegram Group](https://t.me/P2PagosCom)
 
 ---
 
