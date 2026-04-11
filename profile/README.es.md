@@ -15,7 +15,7 @@ P2Pagos está diseñada en torno a algunas decisiones prácticas:
 - **Ag­nóstica en la práctica** — el riel utilizable y las liquidaciones para la mejor ruta de conversión importan más que la ideología
 - **Multi-rail** — distintos mercados necesitan distintas formas de pagar
 - **Modular** — los rieles y flujos pueden habilitarse o dejarse fuera según el caso de uso
-- **Código abierto** — los componentes públicos permanecen bajo licencia MIT
+- **Código abierto** — los componentes públicos permanecen bajo licencia MIT, con el mantenimiento y desarrollo a largo plazo respaldados por los ingresos de la oferta cerrada de pago
 
 Si un riel no liquida ya en un activo soportado por el fork de Aqua Wallet, P2Pagos busca convertirlo adicionalmente al activo soportado que sea más barato y más funcional para ese caso.
 
