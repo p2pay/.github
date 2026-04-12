@@ -21,6 +21,60 @@ Si un rail ne règle pas déjà dans un actif pris en charge par le fork d’Aqu
 
 ---
 
+## Architecture
+
+```mermaid
+flowchart LR
+
+  subgraph walletWrap[" "]
+    wallet["/wallet"]
+    walletPlatform["(iOS et Android)"]
+    seedMono["phrase de récupération"]
+    seedMarket["phrase de récupération"]
+    seedTeam["phrase de récupération / xpub"]
+  end
+
+  mono["/mono"]
+  monoBtcpay["Serveur BTCPay"]
+
+  subgraph docker["Docker"]
+    marketplace["/marketplace"]
+    marketBtcpay["Serveur BTCPay"]
+  end
+
+  team["/team"]
+  otherWallet["/wallet"]
+
+  builtMarket["basé sur"]
+  builtTeam["basé sur"]
+
+  seedMono --> mono
+  seedMarket --> marketplace
+  seedTeam -.-> team
+
+  otherWallet --> marketplace
+
+  mono --> monoBtcpay
+  marketplace --> marketBtcpay
+
+  marketplace -.-> builtMarket
+  builtMarket -.-> mono
+
+  team -.-> builtTeam
+  builtTeam -.-> mono
+
+  style team stroke-dasharray: 6 6
+  style builtMarket fill:transparent,stroke:transparent,color:#999
+  style builtTeam fill:transparent,stroke:transparent,color:#999
+  style walletPlatform fill:transparent,stroke:transparent,color:#999
+
+  click wallet "https://github.com/P2Pagos/wallet" "_blank"
+  click otherWallet "https://github.com/P2Pagos/wallet" "_blank"
+  click mono "https://github.com/P2Pagos/mono" "_blank"
+```
+
+---
+
 ## Intégrations de rails
 
 | Rail | Statut | Devise | Méthodes de paiement | Règlement | Frais | Vérification |
