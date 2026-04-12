@@ -26,8 +26,7 @@ Si un riel no liquida ya en un activo soportado por el fork de Aqua Wallet, P2Pa
 ```mermaid
 flowchart LR
 
-  subgraph walletWrap[" "]
-    wallet["/wallet"]
+  subgraph walletWrap["/wallet"]
     walletPlatform["(iOS y Android)"]
     seedMono["frase semilla"]
     seedMarket["frase semilla"]
@@ -68,7 +67,6 @@ flowchart LR
   style builtTeam fill:transparent,stroke:transparent,color:#999
   style walletPlatform fill:transparent,stroke:transparent,color:#999
 
-  click wallet "https://github.com/P2Pagos/wallet" "_blank"
   click otherWallet "https://github.com/P2Pagos/wallet" "_blank"
   click mono "https://github.com/P2Pagos/mono" "_blank"
 ```
