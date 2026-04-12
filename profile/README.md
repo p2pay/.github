@@ -83,10 +83,11 @@ The repositories should be read as active infrastructure work, not as a finished
 
 ---
 
-## Community
+## Community & Contact
 
 - [GitHub Discussions](https://github.com/orgs/P2Pagos/discussions)
 - [Telegram Group](https://t.me/P2Pagos)
+- [p2pagos@p2pay.to](mailto:p2pagos@p2pay.to) with optional PGP [A1786A2CF6C5B65FDB4519F17E425F745D4EE866](https://pgp.p2pay.to)
 
 ---
 
