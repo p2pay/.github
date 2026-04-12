@@ -28,8 +28,7 @@ If a rail does not already settle into an asset supported by the Aqua wallet for
 ```mermaid
 flowchart LR
 
-  subgraph walletWrap[" "]
-    wallet["/wallet"]
+  subgraph walletWrap["/wallet"]
     walletPlatform["(iOS & Android)"]
     seedMono["seed phrase"]
     seedMarket["seed phrase"]
@@ -70,7 +69,6 @@ flowchart LR
   style builtTeam fill:transparent,stroke:transparent,color:#999
   style walletPlatform fill:transparent,stroke:transparent,color:#999
 
-  click wallet "https://github.com/P2Pagos/wallet" "_blank"
   click otherWallet "https://github.com/P2Pagos/wallet" "_blank"
   click mono "https://github.com/P2Pagos/mono" "_blank"
 ```
