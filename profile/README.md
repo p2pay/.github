@@ -5,11 +5,15 @@
 
 # P2Pagos
 
-Open-source, modular payment infrastructure built around Bitcoin- and stablecoin-based settlement, designed to enable more frictionless integration and payment flows across markets and rails.
+Open-source, modular, and agnostic-by-design payment infrastructure built around self-custodial settlement, designed to make cross-border payment flows more practical across markets, rails, and jurisdictions.
 
-It uses [BTCPay Server](https://github.com/btcpayserver/btcpayserver) as the backend, an [Aqua Wallet](https://github.com/AquaWallet/aqua-wallet) fork for self-custodial settlement, and is primarily built with [Nuxt](https://github.com/nuxt/nuxt) and [Nitro](https://github.com/nitrojs/nitro). P2Pagos combines multiple entry rails — local fiat, cards, P2P, and crypto — with on-chain settlement in Bitcoin, USDT on Polygon, or other stablecoins on Liquid.
+P2Pagos uses [BTCPay Server](https://github.com/btcpayserver/btcpayserver) as the backend and an [Aqua Wallet](https://github.com/AquaWallet/aqua-wallet) fork as the default settlement wallet. Aqua was chosen because it already supports Bitcoin on-chain settlement by default, supports stablecoin-based settlement flows already relevant to the stack today, and can be integrated from BTCPay Server through the Shamrock protocol with a QR-based connection flow.
 
-It is designed for users and businesses that need simpler access to self-custodial, cross-border payment flows, including in markets where traditional payment access is limited.
+P2Pagos combines multiple entry rails — local fiat, cards, P2P, and crypto — with settlement in Bitcoin and selected stablecoins. Polygon support is planned in order to integrate at least two of the rails already listed in the planned section. For every chain and payout path supported, the goal is to remain transparent about what is native, what is added by P2Pagos, and what depends on external providers.
+
+Where direct local cashout is not yet native, P2Pagos will do its best to provide practical usage guidance around compatible external wallets, cards, and off-ramp tools — including Apple Pay / Google Pay compatible options where available — to improve real usability in Latin America and other supported regions. Additional cashout paths can also be layered in modularly, as shown in the tables below.
+
+It is designed for users and businesses that need simpler self-custodial payment flows, especially where traditional payment access is limited, fragmented, or overly dependent on a single provider.
 
 ---
 
@@ -93,6 +97,18 @@ click mono "https://github.com/P2Pagos/mono" "_blank"
 | MtPelerin *(cex-api-integration)* | planned | EUR & CHF | SEPA | Bitcoin On-chain OR USDT Polygon | Low | Standard |
 | Bitzed *(cex-api-integration)* | planned | ZMW | Mobile | Bitcoin On-chain | Low | None |
 | Matbea *(cex+p2p-api-integration)* | planned | RUB | Yandex Pay, Sberbank, Tinkoff, YooMoney, SBP P2P, Mobile phone | Bitcoin On-chain | Low | None |
+
+---
+
+## Cashout Integrations
+
+| Cashout | Status | Currency | Payment Methods | Verification |
+|---------|--------|----------|-----------------|--------------|
+| dLocal | early stage | LATAM / Africa / Asia & Middle East | bank transfer | standard |
+| Ueno Bank | post [moonshot.md](moonshot.md) | PYG / USD | bank transfer / card-popup | standard |
+| Freedomia Card | planned | USD limited settlements | card / Google Pay | none |
+
+Referral code for one month free: [Freedomia](https://www.freedomia.io/a/p2pagos)
 
 ---
 
