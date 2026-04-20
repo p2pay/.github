@@ -103,6 +103,7 @@ click mono "https://github.com/P2Pagos/mono" "_blank"
 | ip-detection | testing | global | IP geolocation and currency detection | optional by default |
 | tor | testing | global | Tor reverse proxy for onion and Tor-based integrations | optional by default |
 | market | testing | global | market aggregation and external offers | optional by default |
+| kyc-kyb | defined | worldwide | KYC / KYB | optional by default |
 | invoicing-reporting-py | in planning | Paraguay | invoicing and reporting | optional by default |
 
 ---
