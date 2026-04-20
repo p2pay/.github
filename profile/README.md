@@ -1,10 +1,13 @@
 [Español](https://github.com/P2Pagos/.github/blob/main/profile/README.es.md) | [Português](https://github.com/P2Pagos/.github/blob/main/profile/README.pt.md) | [Русский](https://github.com/P2Pagos/.github/blob/main/profile/README.ru.md) | [Français](https://github.com/P2Pagos/.github/blob/main/profile/README.fr.md) | [Italiano](https://github.com/P2Pagos/.github/blob/main/profile/README.it.md)
 
+> Translations may be outdated.  
+> Las traducciones pueden estar desactualizadas.
+
 # P2Pagos
 
-Open-source, modular payment infrastructure built around Bitcoin- and stablecoin-based settlement, designed to enable more frictionless integration and payment flows across markets and rails. It uses [BTCPay Server](https://github.com/btcpayserver/btcpayserver) as the backend, an [Aqua Wallet](https://github.com/AquaWallet/aqua-wallet) fork for self-custodial settlement, and is primarily built with [Nuxt](https://github.com/nuxt/nuxt) and [Nitro](https://github.com/nitrojs/nitro).
+Open-source, modular payment infrastructure built around Bitcoin- and stablecoin-based settlement, designed to enable more frictionless integration and payment flows across markets and rails.
 
-P2Pagos combines multiple entry rails — local fiat, cards, P2P, and crypto — with on-chain settlement in Bitcoin, USDT on Polygon, or other stablecoins on Liquid.
+It uses [BTCPay Server](https://github.com/btcpayserver/btcpayserver) as the backend, an [Aqua Wallet](https://github.com/AquaWallet/aqua-wallet) fork for self-custodial settlement, and is primarily built with [Nuxt](https://github.com/nuxt/nuxt) and [Nitro](https://github.com/nitrojs/nitro). P2Pagos combines multiple entry rails — local fiat, cards, P2P, and crypto — with on-chain settlement in Bitcoin, USDT on Polygon, or other stablecoins on Liquid.
 
 It is designed for users and businesses that need simpler access to self-custodial, cross-border payment flows, including in markets where traditional payment access is limited.
 
@@ -13,6 +16,7 @@ It is designed for users and businesses that need simpler access to self-custodi
 ## Approach
 
 P2Pagos is designed around a few practical choices:
+
 - **Self-custodial by default**
 - **Agnostic in practice** — the usable rail and settlements for best conversion path matter more than ideology
 - **Multi-rail** — different markets need different ways to pay
@@ -28,83 +32,88 @@ If a rail does not already settle into an asset supported by the Aqua wallet for
 ```mermaid
 flowchart LR
 
-  subgraph walletWrap["/wallet"]
-    walletPlatform["(iOS & Android)"]
-    seedMono["seed phrase"]
-    seedMarket["seed phrase"]
-    seedTeam["seed phrase / xpub"]
-  end
+subgraph walletWrap["/wallet"]
+  walletPlatform["(iOS & Android)"]
+  seedMono["seed phrase"]
+  seedMarket["seed phrase"]
+  seedTeam["seed phrase / xpub"]
+end
 
-  mono["/mono"]
-  monoBtcpay["BTCPay Server"]
+mono["/mono"]
+monoBtcpay["BTCPay Server"]
 
-  subgraph docker["Docker"]
-    marketplace["/marketplace"]
-    marketBtcpay["BTCPay Server"]
-  end
+subgraph docker["Docker"]
+  marketplace["/marketplace"]
+  marketBtcpay["BTCPay Server"]
+end
 
-  team["/team"]
-  otherWallet["/wallet"]
+team["/team"]
+otherWallet["/wallet"]
+builtMarket["built on"]
+builtTeam["built on"]
 
-  builtMarket["built on"]
-  builtTeam["built on"]
+seedMono --> mono
+seedMarket --> marketplace
+seedTeam -.-> team
+otherWallet --> marketplace
 
-  seedMono --> mono
-  seedMarket --> marketplace
-  seedTeam -.-> team
+mono --> monoBtcpay
+marketplace --> marketBtcpay
 
-  otherWallet --> marketplace
+marketplace -.-> builtMarket
+builtMarket -.-> mono
 
-  mono --> monoBtcpay
-  marketplace --> marketBtcpay
+team -.-> builtTeam
+builtTeam -.-> mono
 
-  marketplace -.-> builtMarket
-  builtMarket -.-> mono
+style team stroke-dasharray: 6 6
+style builtMarket fill:transparent,stroke:transparent,color:#999
+style builtTeam fill:transparent,stroke:transparent,color:#999
+style walletPlatform fill:transparent,stroke:transparent,color:#999
 
-  team -.-> builtTeam
-  builtTeam -.-> mono
-
-  style team stroke-dasharray: 6 6
-  style builtMarket fill:transparent,stroke:transparent,color:#999
-  style builtTeam fill:transparent,stroke:transparent,color:#999
-  style walletPlatform fill:transparent,stroke:transparent,color:#999
-
-  click otherWallet "https://github.com/P2Pagos/wallet" "_blank"
-  click mono "https://github.com/P2Pagos/mono" "_blank"
+click otherWallet "https://github.com/P2Pagos/wallet" "_blank"
+click mono "https://github.com/P2Pagos/mono" "_blank"
 ```
+
 ---
 
 ## Rail Integrations
 
-| Rail | Status | Currency | Payment Methods | Settlement | Fee | Verification |  
-|------|--------|--------|--------|--------|--------|--------|
+| Rail | Status | Currency | Payment Methods | Settlement | Fee | Verification |
+|------|--------|----------|-----------------|------------|-----|--------------|
 | BTC | Implemented | SATS | On-chain & Lightning | None | Bitcoin On-chain | None | None |
-| USDT | Implemented | USD | Liquid & Polygon | USDT Liquid & Polygon | None | None |  
-| Peach | ongoing | Global | Any | Bitcoin On-chain | High | None | 
-| RoboSats | ongoing | Global | Any | Bitcoin On-chain  | High | None | 
-| Mostro | planned | Global | Any | Bitcoin On-chain | High | None |
-| Guardarian | planned | USD, EUR, GBP, CAD, AUD, JPY, TRY, PLN, SEK | Credit/Debit Cards & Google/Apple Pay | Bitcoin On-chain | Medium | Enhanced |
-| Paygate | planned | Global | Credit/Debit Cards | USDT Polygon | Medium | None | 
-| DePix | planned | BRL | Pix | BRL on Liquid | Low | None | 
-| Kamipay | planned | BRL | Pix | USDT Polygon | Low | None | 
-| MtPelerin | planned | EUR & CHF | SEPA | Bitcoin On-chain OR USDT Polygon | Low | Standard | 
-| Bitzed | planned | ZMW | Mobile | Bitcoin On-chain | Low | None | 
-| Matbea | planned | RUB | Yandex Pay, Sberbank, Tinkoff, YooMoney, SBP P2P, Mobile phone | Bitcoin On-chain | Low | None | 
+| USDT | Implemented | USD | Liquid & Polygon | USDT Liquid & Polygon | None | None |
+| Peach *(p2p-api-integration)* | ongoing | Global | Any | Bitcoin On-chain | High | None |
+| RoboSats *(p2p-api-integration)* | ongoing | Global | Any | Bitcoin On-chain | High | None |
+| Mostro *(p2p-api-integration)* | planned | Global | Any | Bitcoin On-chain | High | None |
+| Guardarian *(cex-api-integration)* | planned | USD, EUR, GBP, CAD, AUD, JPY, TRY, PLN, SEK | Credit/Debit Cards & Google/Apple Pay | Bitcoin On-chain | Medium | Enhanced |
+| Paygate *(cex-api-integration)* | planned | Global | Credit/Debit Cards | USDT Polygon | Medium | None |
+| DePix *(cex-api-integration)* | planned | BRL | Pix | BRL on Liquid | Low | None |
+| Kamipay *(cex-api-integration)* | planned | BRL | Pix | USDT Polygon | Low | None |
+| MtPelerin *(cex-api-integration)* | planned | EUR & CHF | SEPA | Bitcoin On-chain OR USDT Polygon | Low | Standard |
+| Bitzed *(cex-api-integration)* | planned | ZMW | Mobile | Bitcoin On-chain | Low | None |
+| Matbea *(cex-api-integration)* | planned | RUB | Yandex Pay, Sberbank, Tinkoff, YooMoney, SBP P2P, Mobile phone | Bitcoin On-chain | Low | None |
 
 ---
 
 ## Active and Planned Repositories
 
 ### [mono](https://github.com/P2Pagos/mono)
-Single user orchestrator MIT repository. It assembles rails, flows, and supporting services in one workspace. Active development is currently centered here.
+
+Single user orchestrator MIT repository.
+
+It assembles rails, flows, and supporting services in one workspace. Active development is currently centered here.
 
 ### [wallet](https://github.com/P2Pagos/wallet)
+
 A MIT fork of the Aqua Flutter Wallet for P2Pagos, with an embedded Nuxt app to manage /mono settings and connect to BTCPay via the Shamrock protocol.
 
 ### dashboard
+
 Nuxt-based MIT app, intended to handle payment flows through an embedded interface in the /wallet Flutter app.
 
 ### marketplace
+
 Closed-source repository for multi-user marketplace integrations of the /mono repo.
 
 ---
@@ -128,9 +137,9 @@ It is not meant to be presented as a universal fit for every merchant.
 
 ## Status
 
-P2Pagos is still evolving. Some components exist as working integrations, others are partial, experimental, or still being assembled into the main orchestrator.
+P2Pagos is still evolving.
 
-The repositories should be read as active infrastructure work, not as a finished product suite.
+Some components exist as working integrations, others are partial, experimental, or still being assembled into the main orchestrator. The repositories should be read as active infrastructure work, not as a finished product suite.
 
 ---
 
