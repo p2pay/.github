@@ -81,10 +81,10 @@ click otherWallet "https://github.com/P2Pagos/wallet" "_blank"
 click mono "https://github.com/P2Pagos/mono" "_blank"
 ```
 
-> Closed-source repo code is only available to team members and not to external collaborators.
-> Some modules that only work with the closed-source repo may be open-sourced at a later stage for integration into third-party external and unrelated projects.
-> Because it is a closed-source repo, it requires enhanced verification for the marketplace admin and for users involved in high-value transactions.
-> It is also supposed to generate enough income to maintain all the MIT repos long-term.
+> Closed-source repo code is only available to team members and not to external collaborators.  
+> Some modules that only work with the closed-source repo may be open-sourced at a later stage for integration into third-party external and unrelated projects.  
+> Because it is a closed-source repo, it requires enhanced verification for the marketplace admin and for users involved in high-value transactions.  
+> It is also supposed to generate enough income to maintain all the MIT repos long-term.  
 
 ---
 
