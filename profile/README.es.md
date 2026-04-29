@@ -36,7 +36,7 @@ Si un riel de entrada no liquida directamente en un activo soportado por el fork
 flowchart LR
 
 subgraph walletWrap["/wallet (MIT)"]
-  walletPlatform["Aqua fork (MIT) / (iOS & Android)"]
+  walletPlatform["Aqua fork (MIT)<br/>iOS & Android"]
   seedMono["frase semilla"]
   seedMarket["frase semilla"]
   seedTeam["frase semilla / xpub"]
