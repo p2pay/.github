@@ -1,35 +1,32 @@
-[English](https://github.com/P2Pagos/.github/blob/main/profile/README.md) | [Português](https://github.com/P2Pagos/.github/blob/main/profile/README.pt.md) | [Русский](https://github.com/P2Pagos/.github/blob/main/profile/README.ru.md) | [Français](https://github.com/P2Pagos/.github/blob/main/profile/README.fr.md) | [Italiano](https://github.com/P2Pagos/.github/blob/main/profile/README.it.md)
+[English](https://github.com/P2Pagos/.github/blob/main/profile/README.md) | [Português](https://github.com/P2Pagos/.github/blob/main/profile/README.pt.md)
 
-> Las traducciones pueden estar desactualizadas.  
-> Translations may be outdated.
+# P2Pagos — Infraestructura de pagos multi-rail open source
 
-# P2Pagos — Infraestructura de Pagos Multi-Rail Open Source
+Infraestructura de pagos open source, modular y agnóstica por diseño para empresas y usuarios que necesitan flujos de pago multi-rail prácticos, liquidación self-custodial y movimientos de dinero transfronterizos más flexibles.
 
-Infraestructura de pagos open-source, modular y agnóstica por diseño para empresas y usuarios que necesitan flujos de pago multi-rail prácticos, liquidación self-custodial y movimiento de dinero cross-border más flexible.
-
-P2Pagos está construido alrededor de **inbound rails**, **multi-rail offramp** y liquidación self-custodial. Está pensado para hacer más práctica la arquitectura de pagos entre mercados, rails, monedas y jurisdicciones, especialmente donde el acceso a pagos tradicionales es fragmentado, limitado o demasiado dependiente de un solo proveedor.
+P2Pagos está construido alrededor de **rieles de entrada**, **offramps multi-rail** y liquidación self-custodial. Está diseñado para hacer que la arquitectura de pagos sea más práctica entre mercados, rieles, monedas y jurisdicciones, especialmente donde el acceso a pagos tradicionales es fragmentado, limitado o demasiado dependiente de un solo proveedor.
 
 P2Pagos usa [BTCPay Server](https://github.com/btcpayserver/btcpayserver) como backend y un fork de [Aqua Wallet](https://github.com/AquaWallet/aqua-wallet) como wallet de liquidación por defecto.
 
-[BTCPay Server](https://github.com/btcpayserver/btcpayserver) fue elegido porque es un backend API y GUI battle-tested, ampliamente adoptado y mantenido por la comunidad, con algunos rails integrados por defecto. También contribuimos activamente a su [ecosistema de core y plugins](https://github.com/search?q=involves%3Alearntheropes+%28org%3Abtcpayserver+OR+org%3Abtcpayserver-tether+OR+org%3Amempool%29&type=issues).
+[BTCPay Server](https://github.com/btcpayserver/btcpayserver) fue elegido porque es un backend API y GUI probado, ampliamente adoptado y mantenido por la comunidad, con algunos rieles ya integrados. También contribuimos activamente a su [core y ecosistema de plugins](https://github.com/search?q=involves%3Alearntheropes+%28org%3Abtcpayserver+OR+org%3Abtcpayserver-tether+OR+org%3Amempool%29&type=issues).
 
-[Aqua Wallet](https://github.com/AquaWallet/aqua-wallet) fue elegida porque ya soporta por defecto liquidación en **btc on-chain, múltiples stablecoins (USD y BRL por ahora)**, y puede integrarse desde BTCPay Server mediante el protocolo Shamrock con un flujo de conexión por QR.
+[Aqua Wallet](https://github.com/AquaWallet/aqua-wallet) fue elegido porque ya soporta liquidación en **BTC on-chain y múltiples stablecoins (USD y BRL por ahora)** por defecto, y puede integrarse desde BTCPay Server mediante el protocolo Shamrock con un flujo de conexión basado en QR.
 
-Cuando el cashout local directo todavía no es nativo, P2Pagos ofrece guías prácticas sobre wallets externas compatibles, tarjetas y herramientas de off-ramp para mejorar la usabilidad real en Latinoamérica y otras regiones soportadas. Por ejemplo, sobre todas las chains de liquidación actualmente planificadas, ya contemplamos wallets y servicios como [Belo](https://simple.belo.app/app/referral?referralCode=GIOVANNIL), [Revolut](https://www.revolut.com) y [Offramp](https://app.offramp.xyz/login?referralCode=njmlxf), incluyendo caminos compatibles con tarjeta y Google Pay / Apple Pay, mientras que opciones más privacy-friendly de tarjeta y Google Pay podrían sumarse más adelante mediante trabajo planificado con la API de FixedFloat o colaboración con el emisor.
+Donde el cashout local directo todavía no es nativo, P2Pagos ofrece orientación práctica sobre wallets externas, tarjetas y herramientas de off-ramp compatibles para mejorar la usabilidad real en América Latina y otras regiones soportadas. Por ejemplo, para todas las cadenas de liquidación actualmente planificadas, ya consideramos wallets y servicios como [Belo](https://simple.belo.app/app/referral?referralCode=GIOVANNIL), [Revolut](https://revolut.com/referral/?referral-code=giovanni_learntheropes) y [Offramp](https://app.offramp.xyz/login?referralCode=njmlxf), incluyendo rutas compatibles con tarjeta y Google Pay / Apple Pay, mientras que opciones de tarjeta y Google Pay más orientadas a la privacidad podrían agregarse más adelante mediante el trabajo planificado con la API de FixedFloat o mediante colaboración con el emisor.
 
 ---
 
-## Enfoque de Arquitectura de Pagos Multi-Rail
+## Enfoque de arquitectura de pagos multi-rail
 
 P2Pagos está diseñado alrededor de algunas decisiones prácticas:
 
 - **Self-custodial por defecto**
-- **Agnóstico en la práctica** — el rail utilizable y la ruta de liquidación importan más que la ideología
-- **Multi-rail por diseño** — distintos mercados necesitan distintas formas de pagar y hacer cash out
-- **Modular** — inbound rails, offramps, flujos y servicios pueden habilitarse o dejarse afuera según el caso de uso
-- **Open source** — los componentes públicos siguen bajo licencia MIT, con mantenimiento y desarrollo a largo plazo sostenidos por ingresos de la oferta closed-source paga
+- **Agnóstico en la práctica** — el riel utilizable y el camino de liquidación importan más que la ideología
+- **Multi-rail por diseño** — diferentes mercados necesitan diferentes formas de pagar y retirar fondos
+- **Modular** — rieles de entrada, offramps, flujos y servicios pueden habilitarse o dejarse fuera según el caso de uso
+- **Open source** — los componentes públicos permanecen bajo licencia MIT, con mantenimiento y desarrollo a largo plazo sostenidos por ingresos provenientes de la oferta cerrada de pago
 
-Si un inbound rail no liquida ya en un activo soportado por el fork de Aqua Wallet, P2Pagos intenta convertir más adelante hacia el activo soportado que sea más barato y funcional para ese caso.
+Si un riel de entrada no liquida directamente en un activo soportado por el fork de Aqua Wallet, P2Pagos busca convertirlo luego al activo soportado que sea más económico y funcional para ese caso.
 
 ---
 
@@ -39,7 +36,7 @@ Si un inbound rail no liquida ya en un activo soportado por el fork de Aqua Wall
 flowchart LR
 
 subgraph walletWrap["/wallet (MIT)"]
-  walletPlatform["fork de Aqua (MIT) / (iOS & Android)"]
+  walletPlatform["Aqua fork (MIT) / (iOS & Android)"]
   seedMono["frase semilla"]
   seedMarket["frase semilla"]
   seedTeam["frase semilla / xpub"]
@@ -49,11 +46,8 @@ mono["/mono (MIT)"]
 monoBtcpay["BTCPay Server (MIT)"]
 
 subgraph docker["Docker"]
-  marketplace["/marketplace (closed-source)"]
+  marketplace["/marketplace<br/>(closed-source)<br/><br/>Rieles:<br/>/banxa (MIT)<br/><br/>Servicios:<br/>/kyc (MIT)<br/>/compliance (MIT)"]
   marketBtcpay["BTCPay Server (MIT)"]
-  bridge["/bridge"]
-  kyc["/kyc"]
-  pyCompliance["/py-compliance"]
 end
 
 team["/team"]
@@ -70,17 +64,13 @@ otherWallet --> marketplace
 
 mono --> monoBtcpay
 marketplace --> marketBtcpay
-dashboard --> marketplace
+dashboard --> otherWallet
 
 marketplace -.-> builtMarket
 builtMarket -.-> mono
 
 team -.-> builtTeam
 builtTeam -.-> mono
-
-marketplace --> bridge
-marketplace --> kyc
-marketplace --> pyCompliance
 
 style team stroke-dasharray: 6 6
 style builtMarket fill:transparent,stroke:transparent,color:#999
@@ -89,150 +79,135 @@ style walletPlatform fill:transparent,stroke:transparent,color:#999
 
 click otherWallet "https://github.com/P2Pagos/wallet" "_blank"
 click mono "https://github.com/P2Pagos/mono" "_blank"
-click bridge "https://github.com/P2Pagos/bridge" "_blank"
-click kyc "https://github.com/P2Pagos/kyc" "_blank"
-click pyCompliance "https://github.com/P2Pagos/py-compliance" "_blank"
 ```
 
-> Los repositorios closed-source solo están disponibles para miembros del equipo y no para colaboradores externos. Algunos módulos podrían open-sourcearse en una etapa posterior.
-
-> Estas integraciones son closed-source porque requieren verificación reforzada para el administrador del marketplace y para los usuarios involucrados en transacciones de alto valor. También financian todo el desarrollo open-source.
-
-> Para estas integraciones, Blockchange.expert puede asesorar un plan estructurado tanto bajo una EAS paraguaya como bajo una LLC estadounidense. Este servicio de consultoría está listo para desplegarse hoy mismo reservando una integration call en https://www.blockchange.expert/en/#call o por email de forma asíncrona.
+> El código del repo closed-source solo está disponible para miembros del equipo y no para colaboradores externos.  
+> Algunos módulos que solo funcionan con el repo closed-source podrían publicarse como open source más adelante para integrarse en proyectos de terceros externos y no relacionados.  
+> Al ser un repo closed-source, requiere verificación reforzada para el administrador del marketplace y para usuarios involucrados en transacciones de alto valor.  
+> También está pensado para generar ingresos suficientes para mantener todos los repos MIT a largo plazo.  
 
 ---
 
-## Inbound Multi-Rails
+## Rieles de entrada multi-rail
 
-| Rail | Estado | Moneda | Métodos de pago | Liquidación | Comisión | Verificación |
+| Riel | Estado | Moneda | Métodos de pago | Liquidación | Comisión | Verificación |
 |------|--------|--------|-----------------|-------------|----------|--------------|
-| BTC | implementado | SATS | on-chain y Lightning | Bitcoin on-chain | ninguna | ninguna |
-| USDT | implementado | USD | Liquid y Polygon | USDT en Liquid y Polygon | ninguna | ninguna |
-| [Peach](https://github.com/P2Pagos/mono/tree/main/rails/peach) *(p2p-api-integration)* | testing | global | cualquiera | Bitcoin on-chain | alta | ninguna |
-| [RoboSats](https://github.com/P2Pagos/mono/tree/main/rails/robosats) *(p2p-api-integration)* | testing | global | cualquiera | Bitcoin on-chain | alta | ninguna |
-| Mostro *(p2p-api-integration)* | evaluating | global | cualquiera | Bitcoin on-chain | alta | ninguna |
-| Guardarian *(cex-api-integration)* | planned | USD, EUR, GBP, CAD, AUD, JPY, TRY, PLN, SEK | tarjetas de crédito/débito y Google/Apple Pay | Bitcoin on-chain | media | reforzada |
-| Paygate *(cex-api-integration)* | planned | global | tarjetas de crédito/débito | USDT en Polygon | media | ninguna |
-| DePix *(cex-api-integration)* | planned | BRL | Pix | BRL en Liquid | baja | ninguna |
-| Kamipay *(cex-api-integration)* | planned | BRL | Pix | USDT en Polygon | baja | ninguna |
-| MtPelerin *(cex-api-integration)* | planned | EUR y CHF | SEPA | Bitcoin on-chain o USDT en Polygon | baja | estándar |
-| Bitzed *(cex-api-integration)* | planned | ZMW | móvil | Bitcoin on-chain | baja | ninguna |
-| Matbea *(cex+p2p-api-integration)* | planned | RUB | Yandex Pay, Sberbank, Tinkoff, YooMoney, SBP P2P, móvil | Bitcoin on-chain | baja | ninguna |
+| BTC | Implementado | SATS | On-chain & Lightning | Bitcoin on-chain | Ninguna | Ninguna |
+| USDT | Implementado | USD | Liquid & Polygon | USDT Liquid & Polygon | Ninguna | Ninguna |
+| [Peach](https://github.com/P2Pagos/mono/tree/main/rails/peach) *(p2p-api-integration)* | en pruebas | Global | Cualquiera | Bitcoin on-chain | Alta | Ninguna |
+| [RoboSats](https://github.com/P2Pagos/mono/tree/main/rails/robosats) *(p2p-api-integration)* | en pruebas | Global | Cualquiera | Bitcoin on-chain | Alta | Ninguna |
+| Mostro *(p2p-api-integration)* | en evaluación | Global | Cualquiera | Bitcoin on-chain | Alta | Ninguna |
+| Guardarian *(cex-api-integration)* | planificado | USD, EUR, GBP, CAD, AUD, JPY, TRY, PLN, SEK | Tarjetas de crédito/débito & Google/Apple Pay | Bitcoin on-chain | Media | Reforzada |
+| Paygate *(cex-api-integration)* | planificado | Global | Tarjetas de crédito/débito | USDT Polygon | Media | Ninguna |
+| DePix *(cex-api-integration)* | planificado | BRL | Pix | BRL en Liquid | Baja | Ninguna |
+| Kamipay *(cex-api-integration)* | planificado | BRL | Pix | USDT Polygon | Baja | Ninguna |
+| MtPelerin *(cex-api-integration)* | planificado | EUR & CHF | SEPA | Bitcoin on-chain O USDT Polygon | Baja | Estándar |
+| Bitzed *(cex-api-integration)* | planificado | ZMW | Móvil | Bitcoin on-chain | Baja | Ninguna |
+| Matbea *(cex+p2p-api-integration)* | planificado | RUB | Yandex Pay, Sberbank, Tinkoff, YooMoney, SBP P2P, teléfono móvil | Bitcoin on-chain | Baja | Ninguna |
 
 ---
 
-## Multi-Rail Offramp
+## Offramp multi-rail
 
 | Cashout | Estado | Moneda | Métodos de pago | Verificación |
 |---------|--------|--------|-----------------|--------------|
-| dLocal | early stage | LATAM / Africa / Asia & Middle East | transferencia bancaria | estándar |
-| Ueno Bank | post [moonshot.md](moonshot.md) | PYG / USD | transferencia bancaria / card-popup | estándar |
-| Freedomia Card | planned | USD limited settlements | tarjeta / Google Pay | ninguna |
-
+| dLocal | etapa inicial | LATAM / África / Asia & Medio Oriente | transferencia bancaria | estándar |
+| Ueno Bank | posterior a [moonshot.md](moonshot.md) | PYG / USD | transferencia bancaria / popup de tarjeta | desconocida, pero no menor a estándar |
+| Freedomia Card | en conversación con el proveedor | liquidaciones limitadas en USD | tarjeta / Google Pay | ninguna |
 
 Código de referido para dos meses del plan gratuito de [Freedomia](https://www.freedomia.io/a/p2pagos).
 
 ---
 
-## Módulos de Servicio
+## Módulos de servicio
 
-| Servicio | Estado | Alcance | Propósito | Default |
-|---------|--------|---------|-----------|---------|
-| [ip-detection](https://github.com/P2Pagos/mono/tree/main/services/ip-detection) | testing | global | geolocalización IP y detección de moneda | habilitado por defecto para detección de moneda basada en la ubicación por país de Cloudflare; los detalles se cubrirán en un post aparte sobre una vulnerabilidad de Proton VPN ignorada por el equipo de seguridad; ipinfo requiere una API key gratuita de por vida |
-| [tor](https://github.com/P2Pagos/mono/tree/main/services/tor) | testing | global | reverse proxy Tor para integraciones onion y basadas en Tor | habilitado si lo consume un rail habilitado |
-| [cors](https://github.com/P2Pagos/mono/tree/main/services/cors) | testing | global | reverse proxy CORS para APIs objetivo | habilitado si lo consume un rail habilitado |
-| [market](https://github.com/P2Pagos/mono/tree/main/services/market) | testing | global | agregación de mercado y ofertas externas | habilitado si lo consume un rail habilitado |
-
----
-
-## Repositorios Activos y Planificados
-
-### [mono](https://github.com/P2Pagos/mono)
-
-Repositorio MIT del orquestador single user.
-
-Reúne inbound rails, flujos de liquidación y servicios de soporte en un solo workspace. El desarrollo activo está actualmente centrado aquí.
-
-### [wallet](https://github.com/P2Pagos/wallet)
-
-Un fork MIT de Aqua Flutter Wallet para P2Pagos, con una app Nuxt embebida para gestionar la configuración de /mono y conectarse a BTCPay mediante el protocolo Shamrock.
-
-### dashboard
-
-App MIT basada en Nuxt, pensada para manejar flujos de pago mediante una interfaz embebida dentro de la app Flutter de /wallet.
-
-### marketplace
-
-Repositorio closed-source para integraciones marketplace multiusuario del repo /mono.
-
-### bridge
-
-Módulo de integración closed-source para orquestación de recepción y payout fiat basada en Bridge.xyz dentro de flujos de marketplace.
-
-### kyc
-
-Módulo de integración closed-source para verificación reforzada, controles a nivel de administrador y flujos de onboarding de usuarios vinculados a transacciones de alto valor en el marketplace.
-
-### py-compliance
-
-Módulo paraguayo closed-source para contabilidad, reporting y operaciones de marketplace orientadas al cumplimiento local.
+| Servicio | Estado | Alcance | Propósito | Por defecto |
+|----------|--------|---------|-----------|-------------|
+| [ip-detection](https://github.com/P2Pagos/mono/tree/main/services/ip-detection) | en pruebas | global | geolocalización IP y detección de moneda | habilitado por defecto para detección de moneda basada en la ubicación por país de Cloudflare; notas detalladas serán cubiertas en un post separado sobre una vulnerabilidad de Proton VPN ignorada por el equipo de seguridad; ipinfo requiere una API key gratuita de por vida |
+| [tor](https://github.com/P2Pagos/mono/tree/main/services/tor) | en pruebas | global | reverse proxy Tor para integraciones onion y basadas en Tor | habilitado si es consumido por un riel habilitado |
+| [cors](https://github.com/P2Pagos/mono/tree/main/services/cors) | en pruebas | global | reverse proxy CORS para APIs de destino | habilitado si es consumido por un riel habilitado |
+| [market](https://github.com/P2Pagos/mono/tree/main/services/market) | en pruebas | global | agregación de mercado y ofertas externas | habilitado si es consumido por un riel habilitado |
+| invoice | planificado | múltiples países, muchos de ellos en LATAM | generación programática de facturas electrónicas al momento de la liquidación del pago, basada en la solución de [Invopop](https://www.invopop.com/), con la publicación de la integración paraguaya SIFEN usando los módulos disponibles de [TIPS SA](https://github.com/TIPS-SA) | deshabilitado por defecto |
 
 ---
 
-## Team
+## Repositorios activos y planificados
 
-P2Pagos está impulsado actualmente por un equipo pequeño de 4 residentes en Paraguay provenientes de 3 países:
+### [/mono](https://github.com/P2Pagos/mono)
 
-- **learntheropes** — fundador, producto, arquitectura e integraciones
-- **Marta** — liderazgo comercial y desarrollo de negocios local
-- **Maurizio** — desarrollo web, integración de APIs y seguridad de infraestructura
-- **Vincent** — comunicación y posicionamiento de mercado
+Repositorio MIT del orquestador single-user.
 
-El equipo planea abrir la EAS antes de fin de abril y empezar a aceptar inversores externos desde comienzos de 2027.
+Ensambla rieles de entrada, flujos de liquidación y servicios de soporte en un solo workspace. El desarrollo activo actualmente está centrado aquí.
+
+### [/wallet](https://github.com/P2Pagos/wallet)
+
+Fork MIT de Aqua Flutter Wallet para P2Pagos, con una app Nuxt embebida para gestionar la configuración de /mono y conectarse a BTCPay mediante el protocolo Shamrock.
+
+### /dashboard
+
+App MIT basada en Nuxt, pensada para gestionar flujos de pago mediante una interfaz embebida en la app Flutter de /wallet.
+
+### /marketplace
+
+Repositorio closed-source para integraciones marketplace multi-user del repo /mono.
+
+Está diseñado para incluir la gestión multi-user por parte del administrador del marketplace, mientras los fondos permanecen siempre bajo control del usuario merchant del marketplace.
+
+Incluirá algunos módulos adicionales actualmente en evaluación:
+
+#### Rieles
+
+- [Cuentas virtuales de Banxa](https://banxa.com/features/fiat/virtual-accounts/): rieles ACH, SEPA, Faster Payments y PayID, todos por confirmar debido a documentación limitada, con datos únicos por merchant.
+
+#### Servicios
+
+- Verificación KYC de merchants.
+- Reportes de operaciones financieras para clientes paraguayos según lo requerido por las reglas de cumplimiento de la Resolución DNIT 47/2026.
+- Reportes de operaciones financieras para clientes de la UE según lo requerido por la regulación MiCA.
 
 ---
 
-## Casos de Uso Cercanos
+## Primeros casos de uso cercanos
 
-Algunos de los casos de uso más claros ya están apareciendo dentro de nuestro entorno inmediato.
+Algunos de los casos de uso más claros ya están surgiendo desde nuestra red inmediata.
 
-- Ya existe una oportunidad activa con una **constructora** a través de Marta, con demanda real para recibir pagos en crypto de mayor valor en Paraguay.
-- Un **creador de contenido con audiencia internacional en salud y bienestar** quiere abrir una agencia para negocios locales que quieran posicionarse mejor en Google Maps, aparecer en featured snippets y gestionar trabajo relacionado con DNS. En ese flujo, P2Pagos puede ser el método de pago, mientras que las empresas que le paguen pueden estar en Paraguay, en el resto de LATAM o incluso en Filipinas.
-- Durante un fin de semana reciente en el **Chaco**, otro contacto italiano muy cercano describió dos líneas de negocio que encajan muy bien con nuestro enfoque de pagos:
+- Una oportunidad con una **empresa constructora** ya está activa a través de Marta, con demanda real para recibir pagos cripto de mayor valor en Paraguay.
+- Un **creador de contenido con audiencia internacional en el espacio de salud y bienestar** quiere abrir una agencia para negocios locales que quieren posicionarse mejor en Google Maps, aparecer en featured snippets y gestionar trabajo relacionado con DNS. En ese flujo, P2Pagos puede ser el método de pago, mientras que los negocios que le pagan pueden estar ubicados en Paraguay, en LATAM en general o incluso en Filipinas.
+- Durante un fin de semana reciente en el **Chaco**, otro contacto italiano cercano describió dos líneas de negocio que encajan muy bien con nuestro enfoque de pagos:
   - asistencia con **trámites paraguayos** como cédula, residencia, licencia de conducir, certificado de vida y residencia, y apertura de RUC
-  - un **hostel low-cost para backpackers y nómadas digitales** que reservan desde el exterior sin cuentas bancarias locales paraguayas
+  - un **hostel low-cost para mochileros y nómadas digitales** que reservan desde el exterior sin cuentas bancarias paraguayas locales
 
-Algunos de estos negocios pueden ser considerados high-risk por procesadores mainstream aunque en realidad no lo sean. Nuestro método de pago les encaja muy bien precisamente porque es settlement-first, cross-border y menos dependiente de las limitaciones bancarias locales.
+Algunos de estos negocios pueden ser considerados de alto riesgo por procesadores de pago mainstream, incluso cuando no son inherentemente problemáticos. Nuestro método de pago encaja bien precisamente porque es settlement-first, transfronterizo y menos dependiente de las limitaciones bancarias locales.
 
 ---
 
-## Casos de Uso Objetivo
+## Casos de uso para pagos multi-rail
 
-P2Pagos está orientado a casos donde los stacks de pago estándar son demasiado limitados, demasiado frágiles o demasiado dependientes de un solo proveedor.
+P2Pagos apunta a casos donde los stacks de pago estándar son demasiado limitados, demasiado frágiles o demasiado dependientes de un solo proveedor.
 
-Casos de uso típicos:
+Casos de uso típicos incluyen:
 
-- negocios cross-border
-- empresas que necesitan pagos inbound multi-rail
-- merchants que quieren liquidación en cripto con mayor alcance de pagos
+- negocios transfronterizos
+- negocios que necesitan rieles de entrada multi-rail
+- merchants que quieren liquidación cripto con mayor alcance de pagos
 - usuarios en mercados emergentes
-- negocios high-risk pero legales
+- negocios de alto riesgo pero lícitos
 - builders que quieren infraestructura de pagos modular y self-hostable
-- Bitcoiners y entusiastas cripto
+- bitcoiners y entusiastas cripto
 
-No está pensado para presentarse como una solución universal para cualquier merchant.
-
----
-
-## Estado Actual
-
-P2Pagos sigue evolucionando.
-
-Algunos componentes existen como integraciones funcionales, otros son parciales, experimentales o todavía están siendo ensamblados dentro del orquestador principal. Los repositorios deben leerse como trabajo activo de infraestructura, no como una suite de productos terminados.
+No está pensado para presentarse como una solución universal para todo tipo de merchant.
 
 ---
 
-## Comunidad y Contacto
+## Estado actual
+
+P2Pagos todavía está evolucionando.
+
+Algunos componentes existen como integraciones funcionales, otros son parciales, experimentales o todavía se están ensamblando dentro del orquestador principal. Los repositorios deben leerse como trabajo activo de infraestructura, no como una suite de productos terminada.
+
+---
+
+## Comunidad & Contacto
 
 - [GitHub Discussions](https://github.com/orgs/P2Pagos/discussions)
 - [Grupo de Telegram](https://t.me/P2Pagos)
@@ -240,4 +215,4 @@ Algunos componentes existen como integraciones funcionales, otros son parciales,
 
 ---
 
-### Proyecto inspirado en [**BitPagos**](https://web.archive.org/web/20141225131358/https://www.bitpagos.com/es/) en 2014, ahora priorizado como respuesta open-source al reciente lanzamiento de un [Stripe Payments BTCPay Plugin](https://plugin-builder.btcpayserver.org/public/plugins/stripe-payments) con KYC obligatorio, disponibilidad limitada por país y liquidación en fiat.
+### Proyecto inspirado por [**BitPagos**](https://web.archive.org/web/20141225131358/https://www.bitpagos.com/es/) en 2014, ahora priorizado como una respuesta open source al reciente lanzamiento de un [Stripe Payments BTCPay Plugin](https://plugin-builder.btcpayserver.org/public/plugins/stripe-payments) con KYC obligatorio, disponibilidad limitada y liquidación fiat.
