@@ -26,12 +26,12 @@ Los caminos posibles de colaboración incluyen:
 
 Postulación enviada.
 
-![Envío de la postulación a Moonshot](https://raw.githubusercontent.com/P2Pagos/.github/refs/heads/main/profile/moonshot-submitted-form.md) Voy andir captura de pantalla pronto.
+![Envío de la postulación a Moonshot](https://raw.githubusercontent.com/P2Pagos/.github/refs/heads/main/profile/moonshot-application-submit.png)
+
+[Formulario entregado](https://raw.githubusercontent.com/P2Pagos/.github/refs/heads/main/profile/moonshot-submitted-form.md)
 
 ## Video de Presentación
 
 También adjuntamos un video corto de presentación del proyecto.
 
-[Ver el video de presentación](https://www.youtube.com/@P2Pagos) Voy a alzar en YouTube el video de introducción del proyecto a Ueno con los rostros del equipo censurados.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="Video de aplicación a Moonshot" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VsKt3lpcVWY" title="Video de aplicación a Moonshot" frameborder="0" allowfullscreen></iframe>
