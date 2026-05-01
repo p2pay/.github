@@ -32,6 +32,6 @@ Application submitted.
 
 We also attached a short project presentation video.
 
-[Watch the presentation video](VsKt3lpcVWY) TODO I will upload the faces censored video of the project introduction to Ueno soon.
+[Watch the presentation video](https://www.youtube.com/@P2Pagos) I will upload the faces censored video of the project introduction to Ueno soon.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="Moonshot application video" frameborder="0" allowfullscreen></iframe>
