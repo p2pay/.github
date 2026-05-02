@@ -89,30 +89,31 @@ click mono "https://github.com/P2Pagos/mono" "_blank"
 ---
 
 ## Inbound Multi-Rails
-| Rail | Status | Currency | Payment Methods | Settlement | Fee | Verification |
-|------|--------|----------|-----------------|------------|-----|--------------|
-| BTC | Implemented | SATS | On-chain & Lightning | Bitcoin On-chain | None | Total |
-| USDT | Implemented | USD | Liquid & Polygon | USDT Liquid & Polygon | None | Total |
-| [Peach](https://github.com/P2Pagos/mono/tree/main/rails/peach) *(p2p-api-integration)* | testing | Global | Any | Bitcoin On-chain | High | Total |
-| [RoboSats](https://github.com/P2Pagos/mono/tree/main/rails/robosats) *(p2p-api-integration)* | testing | Global | Any | Bitcoin On-chain | High | Total |
-| MoonPay ACH USD *(cex-api-integration)* | designing | USD | ACH | TBD | TBD | None |
-| Mostro *(p2p-api-integration)* | evaluating | Global | Any | Bitcoin On-chain | High | Total |
-| Guardarian *(cex-api-integration)* | planned | USD, EUR, GBP, CAD, AUD, JPY, TRY, PLN, SEK | Credit/Debit Cards & Google/Apple Pay | Bitcoin On-chain | Medium | Yes (with RUC structure) |
-| Paygate *(cex-api-integration)* | planned | Global | Credit/Debit Cards | USDT Polygon | Medium | TBD |
-| DePix *(cex-api-integration)* | planned | BRL | Pix | BRL on Liquid | Low | Total |
-| Kamipay *(cex-api-integration)* | planned | BRL | Pix | USDT Polygon | Low | None |
-| MtPelerin *(cex-api-integration)* | planned | EUR & CHF | SEPA | Bitcoin On-chain OR USDT Polygon | Low | Yes (with RUC structure) |
-| Bitzed *(cex-api-integration)* | planned | ZMW | Mobile | Bitcoin On-chain | Low | Total |
-| Matbea *(cex+p2p-api-integration)* | planned | RUB | Yandex Pay, Sberbank, Tinkoff, YooMoney, SBP P2P, Mobile phone | Bitcoin On-chain | Low | Total |
+
+| Rail | Status | Currency | Payment Methods | Settlement | Fee | Verification | Privacy |
+|------|--------|----------|-----------------|------------|-----|--------------| ------- |
+| BTC | Implemented | SATS | On-chain & Lightning | Bitcoin On-chain | None | None | Total |
+| USDT | Implemented | USD | Liquid & Polygon | USDT Liquid & Polygon | None | None | Total |
+| [Peach](https://github.com/P2Pagos/mono/tree/main/rails/peach) *(p2p-api-integration)* | testing | Global | Any | Bitcoin On-chain | High | None | Total |
+| [RoboSats](https://github.com/P2Pagos/mono/tree/main/rails/robosats) *(p2p-api-integration)* | testing | Global | Any | Bitcoin On-chain | High | None | Total |
+| MoonPay ACH USD *(cex-api-integration)* | designing | USD | ACH | TBD | TBD | Standard | None |
+| Mostro *(p2p-api-integration)* | evaluating | Global | Any | Bitcoin On-chain | High | None | Total |
+| Guardarian *(cex-api-integration)* | planned | USD, EUR, GBP, CAD, AUD, JPY, TRY, PLN, SEK | Credit/Debit Cards & Google/Apple Pay | Bitcoin On-chain | Medium | None or Standard | Possible (with RUC structure) |
+| Paygate *(cex-api-integration)* | planned | Global | Credit/Debit Cards | USDT Polygon | Medium | none | Total |
+| DePix *(cex-api-integration)* | planned | BRL | Pix | BRL on Liquid | Low | None | Total |
+| Kamipay *(cex-api-integration)* | planned | BRL | Pix | USDT Polygon | Low | Standard | None |
+| MtPelerin *(cex-api-integration)* | planned | EUR & CHF | SEPA | Bitcoin On-chain OR USDT Polygon | Low | Enlached | Possible (with RUC structure) |
+| Bitzed *(cex-api-integration)* | planned | ZMW | Mobile | Bitcoin On-chain | Low | None | Total |
+| Matbea *(cex+p2p-api-integration)* | planned | RUB | Yandex Pay, Sberbank, Tinkoff, YooMoney, SBP P2P, Mobile phone | Bitcoin On-chain | Low | None | Total |
 ---
 
 ## Multi-Rail Offramp
 
 | Cashout | Status | Currency | Payment Methods | Verification |
 |---------|--------|----------|-----------------|--------------|
-| dLocal | early stage | LATAM / Africa / Asia & Middle East | bank transfer | None |
-| Ueno Bank | post [moonshot.md](moonshot.md) | PYG / USD | bank transfer / card-popup | None |
-| Freedomia Card | under discussion with the provider | USD limited settlements | card / Google Pay | Total |
+| dLocal | early stage | LATAM / Africa / Asia & Middle East | bank transfer | Standard |
+| Ueno Bank | post [moonshot.md](moonshot.md) | PYG / USD | bank transfer / card-popup | Enlached |
+| Freedomia Card | under discussion with the provider | USD limited settlements | card / Google Pay | None |
 
 Referral code for two months of the [Freedomia](https://www.freedomia.io/a/p2pagos) free plan.
 
