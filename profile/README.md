@@ -123,7 +123,7 @@ Referral code for two months of the [Freedomia](https://www.freedomia.io/a/p2pag
 
 | Service | Status | Scope | Purpose | Default |
 |---------|--------|-------|---------|---------|
-| [ip-detection](https://github.com/P2Pagos/mono/tree/main/services/ip) | testing | global | IP geolocation and currency detection | enabled by default for currency detection based on Cloudflare country location; detailed notes will be covered in a separate blog post about a Proton VPN vulnerability ignored by the security team; ipinfo requires a free lifetime API key |
+| [ip](https://github.com/P2Pagos/mono/tree/main/services/ip) | testing | global | IP geolocation and currency detection | enabled by default for currency detection based on Cloudflare country location; detailed notes will be covered in a separate blog post about a Proton VPN vulnerability ignored by the security team; ipinfo requires a free lifetime API key |
 | [tor](https://github.com/P2Pagos/mono/tree/main/services/tor) | testing | global | Tor reverse proxy for onion and Tor-based integrations | enabled if consumed by an enabled rail |
 | [cors](https://github.com/P2Pagos/mono/tree/main/services/cors) | testing | global | CORS reverse proxy for target APIs | enabled if consumed by an enabled rail |
 | [market](https://github.com/P2Pagos/mono/tree/main/services/market) | testing | global | market aggregation and external offers | enabled if consumed by an enabled rail |
