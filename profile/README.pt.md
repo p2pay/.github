@@ -128,7 +128,7 @@ Código de indicação para dois meses do plano gratuito da [Freedomia](https://
 | [tor](https://github.com/P2Pagos/mono/tree/main/services/tor) | em testes | global | reverse proxy Tor para integrações onion e baseadas em Tor | habilitado se consumido por um rail habilitado |
 | [cors](https://github.com/P2Pagos/mono/tree/main/services/cors) | em testes | global | reverse proxy CORS para APIs de destino | habilitado se consumido por um rail habilitado |
 | [market](https://github.com/P2Pagos/mono/tree/main/services/market) | em testes | global | agregação de mercado e ofertas externas | habilitado se consumido por um rail habilitado |
-| invoice | planejado | múltiplos países, muitos deles na LATAM | geração programática de notas fiscais eletrônicas no momento da liquidação do pagamento, baseada na solução da [Invopop](https://www.invopop.com/), com a publicação da integração paraguaia SIFEN usando os módulos disponíveis da [TIPS SA](https://github.com/TIPS-SA) | desabilitado por padrão |
+| invoice | planejado | Entre ellos, el módulo de facturación: generación programática de facturas electrónicas activada en la liquidación, de código abierto, basada en la solución Invopop y extendida con la integración paraguaya de SIFEN mediante los módulos de TIPS SA, con soporte para múltiples países de LATAM. | desabilitado por padrão |
 
 ---
 
