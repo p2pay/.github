@@ -2,12 +2,6 @@
 
 # P2Pagos — Open-Source Multi-Rail Payment Infrastructure
 
-> **Moonshot / Ueno reviewers:** if you arrived here from the application form, please visit the updated project page:
->
-> 👉 **[Coin2Local — Business model, first paying client, and Paraguay/LATAM expansion plan](https://www.p2payments.com/services/coin-2-local)**
->
-> This page explains the current vertical, the first real paid use case, and the planned expansion path for Paraguay and Latin America.
-
 Open-source, modular, and agnostic-by-design payment infrastructure for businesses and users that need practical multi-rail payment flows, self-custodial settlement, and more flexible cross-border money movement.
 
 P2Pagos is built around **inbound rails**, **multi-rail offramps**, and self-custodial settlement. It is designed to make payment architecture more practical across markets, rails, currencies, and jurisdictions, especially where traditional payment access is fragmented, limited, or overly dependent on a single provider.
