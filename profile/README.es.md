@@ -2,12 +2,6 @@
 
 # P2Pagos — Infraestructura de pagos multi-rail open source
 
-> **Revisores de Moonshot / Ueno:** si llegaron aquí desde el formulario de aplicación, por favor visiten la página actualizada del proyecto:
->
-> 👉 **[Coin2Local — Modelo de negocio, primer cliente pagante y plan de expansión Paraguay/LATAM](https://www.p2pagos.com/servicios/coin-2-local)**
->
-> Esta página explica el vertical actual, el primer caso de uso real pagado y el plan de expansión para Paraguay y América Latina.
-
 Infraestructura de pagos open source, modular y agnóstica por diseño para empresas y usuarios que necesitan flujos de pago multi-rail prácticos, liquidación self-custodial y movimientos de dinero transfronterizos más flexibles.
 
 P2Pagos está construido alrededor de **rieles de entrada**, **offramps multi-rail** y liquidación self-custodial. Está diseñado para hacer que la arquitectura de pagos sea más práctica entre mercados, rieles, monedas y jurisdicciones, especialmente donde el acceso a pagos tradicionales es fragmentado, limitado o demasiado dependiente de un solo proveedor.
